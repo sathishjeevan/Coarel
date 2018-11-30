@@ -1,0 +1,1128 @@
+# 
+# 
+# Computer Associates
+#
+# config/schema/inetop.dxc ($Revision: 4.10 $)
+# 
+# comcastPerson Definitions.
+#
+schema set oid-prefix comcastPerson-attr = (2.8.3.3.1.8.7.32.33.34.35.36);
+schema set oid-prefix comcastPerson-oc   = (2.8.3.3.1.8.7.32.33.34.35.37);
+schema set oid-prefix comcastPerson-nb   = (2.8.3.3.1.8.7.32.33.34.35.38);
+
+#
+# Attribute Definitions.
+#
+schema set attribute comcastPerson-attr:1 = {
+	name = comcastAccessRole
+	ldap-names = comcastAccessRole
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+schema set attribute comcastPerson-attr:2 = {
+	name = comcastAdminRoleConstraint
+	ldap-names = comcastAdminRoleConstraint
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+schema set attribute comcastPerson-attr:3 = {
+	name = comcastDisabledState
+	ldap-names = comcastDisabledState
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};	
+
+schema set attribute comcastPerson-attr:4 = {
+	name = comcastIdentityPolicy
+	ldap-names = comcastIdentityPolicy
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};	
+
+schema set attribute comcastPerson-attr:5 = {
+	name = comcastPasswordData
+	ldap-names = comcastPasswordData
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:6 = {
+	name = comcastPasswordHint
+	ldap-names = comcastPasswordHint
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};	
+
+schema set attribute comcastPerson-attr:7 = {
+	name = comcastPasswordHistory
+	ldap-names = comcastPasswordHistory
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};	
+	
+schema set attribute comcastPerson-attr:8 = {
+	name = controlledLocales
+	ldap-names = controlledLocales
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};	
+	
+schema set attribute comcastPerson-attr:9 = {
+	name = controlledMarkets
+	ldap-names = controlledMarkets
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+schema set attribute comcastPerson-attr:10 = {
+	name = email
+	ldap-names = email
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:12 = {
+	name = grandslamRole
+	ldap-names = grandslamRole
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};	
+
+schema set attribute comcastPerson-attr:13 = {
+	name = groups
+	ldap-names = groups
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};	
+
+schema set attribute comcastPerson-attr:14 = {
+	name = physicalLocale
+	ldap-names = physicalLocale
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};	
+	
+schema set attribute comcastPerson-attr:15 = {
+	name = physicalMarket
+	ldap-names = physicalMarket
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};	
+	
+schema set attribute comcastPerson-attr:16 = {
+	name = city
+	ldap-names = city
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};	
+
+schema set attribute comcastPerson-attr:17 = {
+	name = company
+	ldap-names = company
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:18 = {
+	name = companyDescription
+	ldap-names = companyDescription
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:19 = {
+	name = division
+	ldap-names = division
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:20 = {
+	name = divisionDescription
+	ldap-names = divisionDescription
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:21 = {
+	name = entererPernum
+	ldap-names = entererPernum
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:22 = {
+	name = startDate
+	ldap-names = startDate
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:23 = {
+	name = workLocation
+	ldap-names = workLocation
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:24 = {
+	name = workLocationDescription
+	ldap-names = workLocationDescription
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:25 = {
+	name = pernum
+	ldap-names = pernum
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:26 = {
+	name = employeeID
+	ldap-names = employeeID
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:27 = {
+	name = state
+	ldap-names = state
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:28 = {
+	name = streetAddress1
+	ldap-names = streetAddress1
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:29 = {
+	name = streetAddress2
+	ldap-names = streetAddress2
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:30 = {
+	name = managerPernum
+	ldap-names = managerPernum
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:31 = {
+	name = zipCode
+	ldap-names = zipCode
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:32 = {
+	name = ntLogin
+	ldap-names = ntLogin
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:33 = {
+	name = comcastUserType
+	ldap-names = comcastUserType
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:34 = {
+	name = comcastStatus
+	ldap-names = comcastStatus
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:35 = {
+	name = comcastTelephone
+	ldap-names = comcastTelephone
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:36 = {
+	name = comcastDepartment
+	ldap-names = comcastDepartment
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:37 = {
+	name = eeGroup
+	ldap-names = eeGroup
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:38 = {
+	name = gender
+	ldap-names = gender
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:39 = {
+	name = jobCode
+	ldap-names = jobCode
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:40 = {
+	name = jobTitle
+	ldap-names = jobTitle
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:41 = {
+	name = jobLevel
+	ldap-names = jobLevel
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:42 = {
+	name = comcastMiddleName
+	ldap-names = comcastMiddleName
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:43 = {
+	name = companyCode
+	ldap-names = companyCode
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:44 = {
+	name = comcastOrg
+	ldap-names = comcastOrg
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:45 = {
+	name = comcastOrgDescription
+	ldap-names = comcastOrgDescription
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:46 = {
+	name = comcastDepartmentDescription
+	ldap-names = comcastDepartmentDescription
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:47 = {
+	name = imProgressStatus
+	ldap-names = imProgressStatus
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:48 = {
+	name = imOneFacilityFlag
+	ldap-names = imOneFacilityFlag
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:49 = {
+	name = contractorGroup
+	ldap-names = contractorGroup
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:50 = {
+	name = contractorMarket
+	ldap-names = contractorMarket
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:51 = {
+	name = contractorRegion
+	ldap-names = contractorRegion
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:52 = {
+	name = contractorTHW
+	ldap-names = contractorTHW
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+schema set attribute comcastPerson-attr:53 = {
+	name = contractorCS
+	ldap-names = contractorCS
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+schema set attribute comcastPerson-attr:54 = {
+	name = networkShares
+	ldap-names = networkShares
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+schema set attribute comcastPerson-attr:55 = {
+	name = mirrorUser
+	ldap-names = mirrorUser
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:56 = {
+	name = sharepointReference
+	ldap-names = sharepointReference
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:57 = {
+	name = techID
+	ldap-names = techID
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:58 = {
+	name = contractorDivision
+	ldap-names = contractorDivision
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:59 = {
+	name = contractorBillingSystem
+	ldap-names = contractorBillingSystem
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+schema set attribute comcastPerson-attr:60 = {
+	name = oneFacilityRequest
+	ldap-names = oneFacilityRequest
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:61 = {
+	name = endDate
+	ldap-names = endDate
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	
+schema set attribute comcastPerson-attr:62 = {
+	name = imDelegates
+	ldap-names = imDelegates
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+schema set attribute comcastPerson-attr:63 = {
+	name = comcastPwdPin
+	ldap-names = comcastPwdPin
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:64 = {
+	name = contractorPO
+	ldap-names = contractorPO
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastPerson-attr:65 = {
+	name = adOU
+	ldap-names = adOU
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+	schema set attribute comcastPerson-attr:66 = {
+	name = revertData
+	ldap-names = revertData
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:67 = {
+	name = remedyTickets
+	ldap-names = remedyTickets
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:68 = {
+	name = comcastStatusAD
+	ldap-names = comcastStatusAD
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	schema set attribute comcastPerson-attr:69 = {
+	name = bpErnr
+	ldap-names = bpErnr
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:70 = {
+	name = bpCpoc
+	ldap-names = bpCpoc
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:71 = {
+	name = comcastTerminationTimer
+	ldap-names = comcastTerminationTimer
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	schema set attribute comcastPerson-attr:72 = {
+	name = badgeExpirationDate
+	ldap-names = badgeExpirationDate
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	
+	schema set attribute comcastPerson-attr:73 = {
+	name = managerCN
+	ldap-names = managerCN
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+    schema set attribute comcastPerson-attr:74 = {
+    name = groupMemberOf
+    ldap-names = groupMemberOf
+    equality = caseIgnoreMatch
+    syntax = directoryString
+    };
+	
+    schema set attribute comcastPerson-attr:75 = {
+    name = comcastAgentEmployeeID
+    ldap-names = comcastAgentEmployeeID
+    equality = caseIgnoreMatch
+    syntax = directoryString
+        single-valued
+    };
+	
+    schema set attribute comcastPerson-attr:76 = {
+    name = comcastCategory
+    ldap-names = comcastCategory
+    equality = caseIgnoreMatch
+    syntax = directoryString
+        single-valued
+    };
+	
+    schema set attribute comcastPerson-attr:77 = {
+    name = comcastVendorAdminOf
+    ldap-names = comcastVendorAdminOf
+    equality = caseIgnoreMatch
+    syntax = directoryString
+    };
+	
+	schema set attribute comcastPerson-attr:78 = {
+	name = orgHierLvl2Desc
+	ldap-names = orgHierLvl2Desc
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:79 = {
+	name = orgHierLvl3Desc
+	ldap-names = orgHierLvl3Desc
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:80 = {
+	name = orgHierLvl4Desc
+	ldap-names = orgHierLvl4Desc
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:81 = {
+	name = eesubgroup
+	ldap-names = eesubgroup
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:82 = {
+	name = jobfamily
+	ldap-names = jobfamily
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:83 = {
+	name = jobfunction
+	ldap-names = jobfunction
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:84 = {
+	name = jobtype
+	ldap-names = jobtype
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	schema set attribute comcastPerson-attr:85 = {
+	name = orgkey
+	ldap-names = orgkey
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:86 = {
+	name = entity
+	ldap-names = entity
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:87 = {
+	name = entitydesc
+	ldap-names = entitydesc
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:88 = {
+	name = positiondesc
+	ldap-names = positiondesc
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	schema set attribute comcastPerson-attr:89 = {
+	name = BOrights
+	ldap-names = BOrights
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:90 = {
+	name = PMRMrights
+	ldap-names = PMRMrights
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:91 = {
+	name = TimeEntryrights
+	ldap-names = TimeEntryrights
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:92 = {
+	name = StatusFlag
+	ldap-names = StatusFlag
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:93 = {
+	name = ActInactvFlag
+	ldap-names = ActInactvFlag
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:94 = {
+	name = MgrNTID
+	ldap-names = MgrNTID
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	schema set attribute comcastPerson-attr:95 = {
+	name = CsgOperatorId
+	ldap-names = CsgOperatorId
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	
+	schema set attribute comcastPerson-attr:96 = {
+	name = AmdocsOperatorId
+	ldap-names = AmdocsOperatorId
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	
+	schema set attribute comcastPerson-attr:97 = {
+	name = MSOOPRID
+	ldap-names = MSOOPRID
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	
+	schema set attribute comcastPerson-attr:98 = {
+	name = CSGRevokeDate
+	ldap-names = CSGRevokeDate
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	
+	schema set attribute comcastPerson-attr:99 = {
+	name = CSGUsername
+	ldap-names = CSGUsername
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	schema set attribute comcastPerson-attr:100 = {
+	name = legalFirstName
+	ldap-names = legalFirstName
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:101 = {
+	name = legalMiddleName
+	ldap-names = legalMiddleName
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:102 = {
+	name = legalLastName
+	ldap-names = legalLastName
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	### JIRA IDMDEV-219
+	schema set attribute comcastPerson-attr:103 = {
+	name = CSGPrinTable
+	ldap-names = CSGPrinTable
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:104 = {
+	name = sourceCompany
+	ldap-names = sourceCompany
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+
+	schema set attribute comcastPerson-attr:105 = {
+	name = targetCompany
+	ldap-names = targetCompany
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	schema set attribute comcastPerson-attr:106 = {
+	name = TWCLoginID
+	ldap-names = TWCLoginID
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	schema set attribute comcastPerson-attr:107 = {
+	name = TWCEmail
+	ldap-names = TWCEmail
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	schema set attribute comcastPerson-attr:108 = {
+	name = VisionUsername
+	ldap-names = VisionUsername
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+	
+	
+	### END OF JIRA IDMDEV-219
+	
+	schema set attribute comcastPerson-attr:109 = {
+	name = beelineUniqueID
+	ldap-names = beelineUniqueID
+	equality = caseIgnoreMatch
+	syntax = directoryString
+	};
+    ### END OF JIRA IDMDEV-9309
+	
+        schema set attribute comcastPerson-attr:110 = {
+	name = candidateid
+	ldap-names = candidateid
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};	
+   
+    ### Added for BP Users - NPS Project Enhancement
+        schema set attribute comcastPerson-attr:111 = {
+        name = bpRoleDesignation
+        ldap-names = bpRoleDesignation
+        equality = caseIgnoreMatch
+        syntax = directoryString
+                 single-valued
+        };
+
+        schema set attribute comcastPerson-attr:112 = {
+        name = bpPartnerManager
+        ldap-names = bpPartnerManager
+        equality = caseIgnoreMatch
+        syntax = directoryString
+                 single-valued
+        };
+	
+	### Added for Retail 360 application
+        schema set attribute comcastPerson-attr:113 = {
+        name = comcastRetail360Role
+        ldap-names = comcastRetail360Role
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        multi-valued
+        };
+
+        schema set attribute comcastPerson-attr:114 = {
+        name = comcastRetail360Store
+        ldap-names = comcastRetail360Store
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        multi-valued
+        };
+
+        schema set attribute comcastPerson-attr:115 = {
+        name = comcastRetail360Division
+        ldap-names = comcastRetail360Division
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        multi-valued
+        };
+
+        schema set attribute comcastPerson-attr:116 = {
+        name = comcastRetail360Region
+        ldap-names = comcastRetail360Region
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        multi-valued
+        };
+
+	####Added as part of BP Users Enhancement Project
+	schema set attribute comcastPerson-attr:117 = {
+        name = comcastBPFulfillmentCenter
+        ldap-names = comcastBPFulfillmentCenter
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        single-valued
+        };
+
+	schema set attribute comcastPerson-attr:118 = {
+        name = comcastBPDivision
+        ldap-names = comcastBPDivision
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        single-valued
+        };
+
+	schema set attribute comcastPerson-attr:119 = {
+        name = comcastBPRegion
+        ldap-names = comcastBPRegion
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        single-valued
+        };
+
+        schema set attribute comcastPerson-attr:120 = {
+        name =  comcastUARReviewer
+        ldap-names = comcastUARReviewer
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        single-valued
+        };
+
+        schema set attribute comcastPerson-attr:121 = {
+        name =  FormCheck
+        ldap-names = FormCheck
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        single-valued
+        };
+
+        schema set attribute comcastPerson-attr:122 = {
+        name = privilegeGroups
+        ldap-names = privilegeGroups
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        multi-valued
+        };
+
+	schema set attribute comcastPerson-attr:123 = {
+        name = RallyResponse
+        ldap-names = RallyResponse
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        single-valued
+         };
+
+        schema set attribute comcastPerson-attr:124 = {
+        name = ComcastSmartOffice
+        ldap-names = ComcastSmartOffice
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        multi-valued
+        };
+
+        schema set attribute comcastPerson-attr:125 = {
+        name = ComcastSmartOfficeDivision
+        ldap-names = ComcastSmartOfficeDivision
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        multi-valued
+        };
+
+        schema set attribute comcastPerson-attr:126 = {
+        name = ComcastSmartOfficeAgentType
+        ldap-names = ComcastSmartOfficeAgentType
+        equality = caseIgnoreMatch
+        syntax = directoryString
+        multi-valued
+        };
+
+	
+#
+# Object Class Definitions.
+#
+schema set object-class comcastPerson-oc:1 = {
+	name = comcastPerson
+	subclass-of InetOrgPerson
+	kind = structural
+	must-contain
+		cn
+	may-contain
+		sn,
+		givenname,
+		comcastAccessRole,
+		comcastAdminRoleConstraint,
+		comcastDisabledState,
+		comcastIdentityPolicy,
+		comcastPasswordData,
+		comcastPasswordHint,
+		comcastPasswordHistory,
+		controlledLocales,
+		controlledMarkets,
+		email,
+		grandslamRole,
+		groups,
+		physicalLocale,
+		physicalMarket,
+		city,
+		comcastPwdPin,
+		company,
+		companyDescription,
+		division,
+		divisionDescription,
+		entererPernum,
+		startDate,
+		workLocation,
+		workLocationDescription,
+		pernum,
+		employeeID,
+		state,
+		streetAddress1,
+		streetAddress2,
+		managerPernum,
+		zipCode,
+		ntLogin,
+		comcastUserType,
+		comcastStatus,
+		comcastTelephone,
+		comcastDepartment,
+		eeGroup,
+		gender,
+		jobCode,
+		jobTitle,
+		jobLevel,
+		comcastMiddleName,
+		companyCode,
+		comcastOrg,
+		comcastOrgDescription,
+		comcastDepartmentDescription,
+		imProgressStatus,
+		imOneFacilityFlag,
+		contractorGroup,
+		contractorMarket,
+		contractorRegion,
+		contractorTHW,
+		contractorCS,
+		networkShares,
+		mirrorUser,
+		sharepointReference,
+		techID,
+		contractorDivision,
+		contractorBillingSystem,
+		oneFacilityRequest,
+		endDate,
+		imDelegates,
+		contractorPO,
+		adOU,
+		revertData,
+		remedyTickets,
+		comcastStatusAD,
+		bpErnr,
+		bpCpoc,
+		comcastTerminationTimer,
+		badgeExpirationDate,
+		managerCN,
+		groupMemberOf,
+       		comcastAgentEmployeeID,
+        	comcastCategory,
+        	comcastVendorAdminOf,
+		orgHierLvl2Desc,
+		orgHierLvl3Desc,
+		orgHierLvl4Desc,
+		eesubgroup,
+		jobfamily,
+		jobfunction,
+		jobtype,
+		orgkey,
+		entity,
+		entitydesc,
+		positiondesc,
+		BOrights,
+		PMRMrights,
+		TimeEntryrights,
+		StatusFlag,
+		ActInactvFlag,
+		MgrNTID,
+		CsgOperatorId,
+		AmdocsOperatorId,
+		MSOOPRID,
+		CSGRevokeDate,
+		CSGUsername,
+		legalFirstName,
+		legalMiddleName,
+		legalLastName,
+		CSGPrinTable,
+		sourceCompany,
+		targetCompany,
+		TWCLoginID,
+		TWCEmail,
+		VisionUsername,
+		beelineUniqueID,
+		candidateid,
+        	bpRoleDesignation,
+       		bpPartnerManager,
+		comcastRetail360Role,
+		comcastRetail360Store,
+		comcastRetail360Division,
+		comcastRetail360Region,
+		comcastBPFulfillmentCenter,
+		comcastBPDivision,
+		comcastBPRegion,
+		comcastUARReviewer,
+		FormCheck,
+		privilegeGroups,
+		RallyResponse,
+                ComcastSmartOffice,
+                ComcastSmartOfficeDivision,
+                ComcastSmartOfficeAgentType
+	};
+
+#
+# Name Bindings.
+#
+
+schema set name-binding comcastPerson-nb:3 = {
+	name = comcastPerson-o
+	comcastPerson allowable-parent organization
+	named-by cn
+	};
+
+schema set name-binding comcastPerson-nb:4 = {
+	name = comcastPerson-ou
+	comcastPerson allowable-parent organizationalUnit
+	named-by cn
+	};

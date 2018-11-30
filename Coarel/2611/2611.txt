@@ -1,0 +1,3 @@
+
+Identity Portal -- \\172.27.199.106\d$\IDM_Deployments\Github Repository Data Setup\Identity Portal\Sigma Backup\
+Identity Manager -- \\172.27.199.106\d$\IDM_Deployments\Github Repository Data Setup

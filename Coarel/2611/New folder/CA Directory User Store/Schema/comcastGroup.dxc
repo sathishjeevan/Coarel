@@ -1,0 +1,177 @@
+# 
+# 
+# Computer Associates
+#
+# config/schema/inetop.dxc ($Revision: 4.10 $)
+# 
+# comcastGroup Definitions - Used in IM to represent a Business Partner.
+#
+schema set oid-prefix comcastGroup-attr = (2.8.3.3.1.8.7.32.33.34.35.39);
+schema set oid-prefix comcastGroup-oc   = (2.8.3.3.1.8.7.32.33.34.35.40);
+
+#
+# Attribute Definitions.
+#
+schema set attribute comcastGroup-attr:1 = {
+	name = bpVPApprover
+	ldap-names = bpVPApprover
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastGroup-attr:2 = {
+	name = bpManagerApprover
+	ldap-names = bpManagerApprover
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastGroup-attr:3 = {
+	name = bpRequester
+	ldap-names = bpRequester
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};	
+
+schema set attribute comcastGroup-attr:4 = {
+	name = bpContactEmail
+	ldap-names = bpContactEmail
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastGroup-attr:5 = {
+	name = bpContactPhone
+	ldap-names = bpContactPhone
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastGroup-attr:6 = {
+	name = bpContactName
+	ldap-names = bpContactName
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};	
+
+schema set attribute comcastGroup-attr:7 = {
+	name = bpContactTitle
+	ldap-names = bpContactTitle
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastGroup-attr:8 = {
+	name = bpIsInternationalAgreement
+	ldap-names = bpIsInternationalAgreement
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	
+schema set attribute comcastGroup-attr:9 = {
+	name = bpPartnerType
+	ldap-names = bpPartnerType
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		multi-valued
+	};
+
+schema set attribute comcastGroup-attr:10 = {
+	name = bpIsAccessBilling
+	ldap-names = bpIsAccessBilling
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+schema set attribute comcastGroup-attr:11 = {
+	name = bpIsProcessPayments
+	ldap-names = bpIsProcessPayments
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+	
+schema set attribute comcastGroup-attr:12 = {
+	name = bpVendorAddress
+	ldap-names = bpVendorAddress
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		multi-valued
+	};
+	
+schema set attribute comcastGroup-attr:13 = {
+	name = bpVendorContact
+	ldap-names = bpVendorContact
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		multi-valued
+	};	
+	
+schema set attribute comcastGroup-attr:14 = {
+	name = bpVendorConnections
+	ldap-names = bpVendorConnections
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		multi-valued
+	};
+	
+schema set attribute comcastGroup-attr:15 = {
+	name = bpVendorId
+	ldap-names = bpVendorId
+	equality = caseIgnoreMatch
+	syntax = directoryString
+		single-valued
+	};
+
+####Added as part of BP Users Enhancement Project
+schema set attribute comcastGroup-attr:16 = {
+        name = bpVendorEmailDomain
+        ldap-names = bpVendorEmailDomain
+        equality = caseIgnoreMatch
+        syntax = directoryString
+                multi-valued
+        };
+
+
+#
+# Object Class Definitions.
+#
+schema set object-class comcastGroup-oc:1 = {
+	name = comcastGroup
+	subclass-of top
+	kind = auxiliary
+	may-contain
+		bpVPApprover,
+		bpManagerApprover,
+		bpRequester,
+		bpContactEmail,
+		bpContactPhone,
+		bpContactName,
+		bpContactTitle,
+		city,
+		state,
+		streetAddress1,
+		streetAddress2,
+		zipCode,
+		comcastTelephone,
+		c,
+		bpIsInternationalAgreement,
+		bpPartnerType,
+		bpIsAccessBilling,
+		bpIsProcessPayments,
+		bpErnr,
+		bpVendorAddress,
+		bpVendorContact,
+		bpVendorConnections,
+		bpVendorId,
+		bpVendorEmailDomain
+	};
